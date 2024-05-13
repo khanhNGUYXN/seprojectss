@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body
+    class="bg-black text-white flex items-center justify-center min-h-screen"
+  >
+    <div class="p-6 bg-gray-900 rounded-lg w-96">
+      <h1 class="text-3xl font-bold text-red-500 mb-6">Xcinema</h1>
+      <form action="/signin" method="post">
+        <div class="mb-4">
+          <label for="account" class="block text-sm font-medium">Account</label>
+          <input
+            type="text"
+            id="account"
+            name="account"
+            required
+            class="mt-1 block w-full p-2 bg-gray-800 border-none rounded-md text-white"
+          />
+        </div>
+        <div class="mb-6">
+          <label for="password" class="block text-sm font-medium"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            class="mt-1 block w-full p-2 bg-gray-800 border-none rounded-md text-white"
+          />
+        </div>
+        <div><a href="./recoverry.html"> Forgot Password? </a></div>
+        <div><a href="./signup.html"> New User? Sign up</a></div>
+        <button
+          type="submit"
+          class="w-full p-3 bg-red-600 rounded-md hover:bg-red-700"
+        >
+          Sign In
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

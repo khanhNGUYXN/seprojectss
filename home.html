@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xinema Home</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="output.css" rel="stylesheet" />
+    <style>
+      /* CSS for hover effect */
+      .hover-zoom {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .hover-zoom:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .hidden-description {
+        display: none;
+      }
+
+      .hover-zoom:hover .hidden-description {
+        display: block;
+      }
+
+      .carousel-inner > .item > img,
+      .carousel-inner > .item > a > img {
+        width: 70%;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white">
+    <header class="flex items-center p-10 bg-gray-800">
+      <h1 class="text-red-500 text-6xl mr-4">Xinema</h1>
+      <nav class="flex space-x-4">
+        <button class="text-white text-4xl">Movies</button>
+        <button class="text-white text-4xl">News</button>
+      </nav>
+      <div class="flex-grow"></div>
+      <a href="login.html"
+        ><button class="text-white ml-auto text-4xl">Login</button></a
+      >
+    </header>
+
+    <main class="p-4">
+      <!-- Hot News Section -->
+      <section class="mb-4">
+        <div class="flex justify-center items-center flex-col min-h-screen">
+          <h2 class="text-5xl text-red-500 text-font-bold mb-4">Hot News</h2>
+          <div id="hotNewsCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#hotNewsCarousel" data-slide-to="0"></li>
+              <li data-target="#hotNewsCarousel" data-slide-to="1"></li>
+              <li data-target="#hotNewsCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="item active hover-zoom">
+                <img src="img_news1.jpg" alt="News 1" />
+                <div class="carousel-caption">
+                  <h3>News 1</h3>
+                  <p class="hidden-description">
+                    This is the description for News 1.
+                  </p>
+                </div>
+              </div>
+              <div class="item hover-zoom">
+                <img src="img_news2.jpg" alt="News 2" />
+                <div class="carousel-caption">
+                  <h3>News 2</h3>
+                  <p class="hidden-description">
+                    This is the description for News 2.
+                  </p>
+                </div>
+              </div>
+              <div class="item hover-zoom">
+                <img src="img_news3.jpg" alt="News 3" />
+                <div class="carousel-caption">
+                  <h3>News 3</h3>
+                  <p class="hidden-description">
+                    This is the description for News 3.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="left carousel-control"
+              href="#hotNewsCarousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="glyphicon glyphicon-chevron-left"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="right carousel-control"
+              href="#hotNewsCarousel"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="glyphicon glyphicon-chevron-right"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Movies Selection Section -->
+      <section class="mb-4">
+        <div class="flex justify-center items-center flex-col min-h-screen">
+          <h2 class="text-5xl text-white mb-4">Movies Selection</h2>
+          <div id="moviesCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li
+                data-target="#moviesCarousel"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#moviesCarousel" data-slide-to="1"></li>
+              <li data-target="#moviesCarousel" data-slide-to="2"></li>
+              <li data-target="#moviesCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="item active hover-zoom">
+                <img src="img_news1.jpg" alt="Movie 1" />
+                <div class="carousel-caption">
+                  <h3>Movie 1</h3>
+                  <p class="hidden-description">
+                    This is the description for Movie 1.
+                  </p>
+                </div>
+              </div>
+              <div class="item hover-zoom">
+                <img src="img_news2.jpg" alt="Movie 2" />
+                <div class="carousel-caption">
+                  <h3>Movie 2</h3>
+                  <p class="hidden-description">
+                    This is the description for Movie 2.
+                  </p>
+                </div>
+              </div>
+              <div class="item hover-zoom">
+                <img src="img_news3.jpg" alt="Movie 3" />
+                <div class="carousel-caption">
+                  <h3>Movie 3</h3>
+                  <p class="hidden-description">
+                    This is the description for Movie 3.
+                  </p>
+                </div>
+              </div>
+              <div class="item hover-zoom">
+                <img src="img_news4.jpg" alt="Movie 4" />
+                <div class="carousel-caption">
+                  <h3>Movie 4</h3>
+                  <p class="hidden-description">
+                    This is the description for Movie 4.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="left carousel-control"
+              href="#moviesCarousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="glyphicon glyphicon-chevron-left"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="right carousel-control"
+              href="#moviesCarousel"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="glyphicon glyphicon-chevron-right"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
